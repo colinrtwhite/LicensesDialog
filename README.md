@@ -2,7 +2,7 @@
 
 LicensesDialog is a simple, clean way to credit the open source software your app uses.
 
-<img src="assets/licenses_dialog.gif" width=360/>
+<img src="assets/licenses_dialog.gif" width=240/>
 
 ## Example
 
