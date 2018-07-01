@@ -1,0 +1,37 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion compileSdk as Integer
+
+    defaultConfig {
+        applicationId 'com.colinrtwhite.licensesdialog'
+        minSdkVersion minSdk as Integer
+        targetSdkVersion targetSdk as Integer
+        versionCode versionCode as Integer
+        versionName versionName
+
+        vectorDrawables.useSupportLibrary true
+        testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation project(':library')
+
+    // Android Support Library
+    implementation "com.android.support:appcompat-v7:$supportLibraryVersion"
+
+    // Kotlin
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
+
+    // JUnit
+    testImplementation "junit:junit:$junitVersion"
+}

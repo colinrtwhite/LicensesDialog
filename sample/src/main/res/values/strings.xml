@@ -1,0 +1,4 @@
+<resources>
+	<string name="app_name">LicensesDialog</string>
+	<string name="licenses_button">Show me some licenses!</string>
+</resources>
