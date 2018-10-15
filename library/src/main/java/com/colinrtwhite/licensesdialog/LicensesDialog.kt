@@ -1,21 +1,18 @@
 package com.colinrtwhite.licensesdialog
 
 import android.content.Context
-import android.support.annotation.ColorInt
-import android.support.annotation.MainThread
-import android.support.annotation.StringRes
-import android.support.annotation.StyleRes
-import android.support.v4.content.ContextCompat
-import android.support.v7.app.AlertDialog
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
 import android.view.View
+import androidx.annotation.ColorInt
+import androidx.annotation.MainThread
+import androidx.annotation.StringRes
+import androidx.annotation.StyleRes
+import androidx.appcompat.app.AlertDialog
+import androidx.core.content.ContextCompat
 import com.colinrtwhite.licensesdialog.chrome.CustomTabData
 import com.colinrtwhite.licensesdialog.license.ApacheLicense20
 import com.colinrtwhite.licensesdialog.model.Copyright
 import com.colinrtwhite.licensesdialog.model.Notice
 import java.util.Collections.emptyList
-
 
 /**
  * Use [LicensesDialog.Builder] to create and show a list of open source software notices.
@@ -152,9 +149,9 @@ class LicensesDialog private constructor(
 		val dividerColor = ContextCompat.getColor(context, dividerColorResId)
 
 		val view = View.inflate(context, R.layout.license_dialog_list, null)
-		view.findViewById<RecyclerView>(R.id.list).apply {
+		view.findViewById<androidx.recyclerview.widget.RecyclerView>(R.id.list).apply {
 			adapter = LicensesListAdapter(this, notices, customTabData, dividerColor, alwaysExpandLicenses)
-			layoutManager = LinearLayoutManager(context)
+			layoutManager = androidx.recyclerview.widget.LinearLayoutManager(context)
 		}
 		view.findViewById<View>(R.id.divider_top).setBackgroundColor(dividerColor)
 		view.findViewById<View>(R.id.divider_bottom).setBackgroundColor(dividerColor)

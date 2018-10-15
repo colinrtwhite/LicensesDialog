@@ -1,6 +1,5 @@
 package com.colinrtwhite.licensesdialog.model
 
-
 class Notice @JvmOverloads constructor(
 	val title: String,
 	val license: License,

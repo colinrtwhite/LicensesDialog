@@ -2,7 +2,6 @@ package com.colinrtwhite.licensesdialog.license
 
 import com.colinrtwhite.licensesdialog.model.License
 
-
 object GnuGeneralPublicLicense30 : License {
 
 	override val title = "GNU General Public License 3.0"

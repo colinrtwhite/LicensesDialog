@@ -7,7 +7,6 @@ import android.view.View
 import com.colinrtwhite.licensesdialog.openWebPage
 import kotlinx.android.parcel.Parcelize
 
-
 @Parcelize
 class CustomTabsURLSpan(
 	private val uri: Uri,

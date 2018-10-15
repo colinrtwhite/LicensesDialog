@@ -5,21 +5,14 @@ import android.content.Intent
 import android.content.res.TypedArray
 import android.graphics.Color
 import android.net.Uri
-import android.support.annotation.AttrRes
-import android.support.annotation.ColorInt
-import android.support.annotation.LayoutRes
-import android.support.customtabs.CustomTabsIntent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.annotation.AttrRes
+import androidx.annotation.ColorInt
+import androidx.annotation.LayoutRes
+import androidx.browser.customtabs.CustomTabsIntent
 import com.colinrtwhite.licensesdialog.chrome.CustomTabData
-
-
-internal var View.isVisible: Boolean
-	get() = visibility == View.VISIBLE
-	set(value) {
-		visibility = if (value) View.VISIBLE else View.GONE
-	}
 
 internal val Context.primaryColor: Int
 	@ColorInt get() = getColorResource(R.attr.colorPrimary, Color.BLACK)

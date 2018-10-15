@@ -1,20 +1,20 @@
 package com.colinrtwhite.licensesdialog
 
-import android.support.annotation.ColorInt
-import android.support.v7.widget.RecyclerView
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.method.LinkMovementMethod
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.annotation.ColorInt
+import androidx.core.view.isVisible
+import androidx.recyclerview.widget.RecyclerView
 import com.colinrtwhite.licensesdialog.chrome.CustomTabData
 import com.colinrtwhite.licensesdialog.chrome.CustomTabsURLSpan
 import com.colinrtwhite.licensesdialog.model.Notice
 
-
 internal class LicensesListAdapter(
-	private val list: RecyclerView,
+	private val list: androidx.recyclerview.widget.RecyclerView,
 	private val notices: List<Notice>,
 	private val customTabData: CustomTabData,
 	@ColorInt private val backgroundColor: Int,

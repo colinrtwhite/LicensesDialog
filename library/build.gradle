@@ -16,7 +16,7 @@ android {
 		versionName versionName
 
 		vectorDrawables.useSupportLibrary true
-		testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
+		testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
 	}
 	buildTypes {
 		release {
@@ -32,10 +32,12 @@ androidExtensions {
 }
 
 dependencies {
-	// Android Support Library
-	implementation "com.android.support:appcompat-v7:$supportLibraryVersion"
-	implementation "com.android.support:customtabs:$supportLibraryVersion"
-	implementation "com.android.support:recyclerview-v7:$supportLibraryVersion"
+	// AndroidX
+	implementation "androidx.appcompat:appcompat:$androidXVersion"
+	implementation "androidx.browser:browser:$androidXVersion"
+	implementation "androidx.core:core-ktx:$androidXVersion"
+	implementation "androidx.recyclerview:recyclerview:$androidXVersion"
+	implementation "com.google.android.material:material:$androidXVersion"
 
 	// Kotlin
 	implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
