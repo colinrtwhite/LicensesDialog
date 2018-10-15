@@ -1,10 +1,9 @@
 package com.colinrtwhite.licensesdialog
 
 import android.content.Context
-import android.support.v7.widget.AppCompatTextView
 import android.util.AttributeSet
+import androidx.appcompat.widget.AppCompatTextView
 import kotlin.math.ceil
-
 
 /**
  * A TextView which wraps its width to the length of its longest line.

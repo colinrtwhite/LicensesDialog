@@ -2,7 +2,6 @@ package com.colinrtwhite.licensesdialog.license
 
 import com.colinrtwhite.licensesdialog.model.License
 
-
 object EclipsePublicLicense20 : License {
 
 	override val title = "Eclipse Public License 2.0"

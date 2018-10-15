@@ -1,6 +1,5 @@
 package com.colinrtwhite.licensesdialog.model
 
-
 interface License {
 
 	val title: String

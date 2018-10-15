@@ -1,9 +1,9 @@
 package com.colinrtwhite.licensesdialog.sample
 
 import android.os.Bundle
-import android.support.v4.content.ContextCompat
-import android.support.v7.app.AppCompatActivity
 import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import com.colinrtwhite.licensesdialog.LicensesDialog
 import com.colinrtwhite.licensesdialog.license.ApacheLicense20
 import com.colinrtwhite.licensesdialog.license.GnuGeneralPublicLicense30

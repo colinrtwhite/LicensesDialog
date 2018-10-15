@@ -17,19 +17,20 @@
 		android:id="@+id/title"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		style="@style/TextAppearance.AppCompat.Title"/>
+		style="@style/TextAppearance.MaterialComponents.Headline6"/>
 
 	<com.colinrtwhite.licensesdialog.LineWidthBreakTextView
 		android:id="@+id/url"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		style="@style/TextAppearance.AppCompat.Body1"/>
+		style="@style/TextAppearance.MaterialComponents.Body2"/>
 
 	<TextView
 		android:id="@+id/license_title"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		style="@style/TextAppearance.AppCompat.Small"/>
+		android:textColor="?android:attr/textColorTertiary"
+		style="@style/TextAppearance.MaterialComponents.Subtitle2"/>
 
 	<TextView
 		android:id="@+id/license_text"
@@ -38,6 +39,6 @@
 		android:layout_marginTop="8dp"
 		android:fontFamily="monospace"
 		android:padding="8dp"
-		android:textSize="12sp"
-		style="@style/TextAppearance.AppCompat.Body1"/>
+		android:textColor="?android:attr/textColorPrimary"
+		android:textSize="12sp"/>
 </LinearLayout>

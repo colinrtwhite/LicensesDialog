@@ -2,7 +2,6 @@ package com.colinrtwhite.licensesdialog.license
 
 import com.colinrtwhite.licensesdialog.model.License
 
-
 object Bsd2ClauseLicense : License {
 
 	override val title = "2-Clause BSD License"

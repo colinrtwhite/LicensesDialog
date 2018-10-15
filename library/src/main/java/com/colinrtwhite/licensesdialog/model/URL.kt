@@ -2,7 +2,6 @@ package com.colinrtwhite.licensesdialog.model
 
 import android.net.Uri
 
-
 class URL @JvmOverloads constructor(
 	val text: String,
 	val isHttps: Boolean = true

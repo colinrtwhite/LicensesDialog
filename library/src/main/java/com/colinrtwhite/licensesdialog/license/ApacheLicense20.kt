@@ -2,7 +2,6 @@ package com.colinrtwhite.licensesdialog.license
 
 import com.colinrtwhite.licensesdialog.model.License
 
-
 object ApacheLicense20 : License {
 
 	override val title = "Apache License 2.0"

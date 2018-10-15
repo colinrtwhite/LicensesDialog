@@ -2,7 +2,6 @@ package com.colinrtwhite.licensesdialog.license
 
 import com.colinrtwhite.licensesdialog.model.License
 
-
 object MozillaPublicLicense20 : License {
 
 	override val title = "Mozilla Public License 2.0"
