@@ -14,7 +14,7 @@ import com.colinrtwhite.licensesdialog.chrome.CustomTabsURLSpan
 import com.colinrtwhite.licensesdialog.model.Notice
 
 internal class LicensesListAdapter(
-	private val list: androidx.recyclerview.widget.RecyclerView,
+	private val list: RecyclerView,
 	private val notices: List<Notice>,
 	private val customTabData: CustomTabData,
 	@ColorInt private val backgroundColor: Int,

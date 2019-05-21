@@ -41,14 +41,11 @@ dependencies {
 
 	// Kotlin
 	implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
-
-	// JUnit
-	testImplementation "junit:junit:$junitVersion"
 }
 
 task sourcesJar(type: Jar) {
 	from android.sourceSets.main.java.srcDirs
-	classifier = 'sources'
+    getArchiveClassifier().set('sources')
 }
 
 artifacts {

@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
 	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
 		setContentView(R.layout.activity_main)
-		findViewById<Button>(R.id.licenses_button).setOnClickListener(this::onLicensesButtonClick)
+		findViewById<Button>(R.id.licenses_button).setOnClickListener(::onLicensesButtonClick)
 	}
 
 	private fun onLicensesButtonClick() {

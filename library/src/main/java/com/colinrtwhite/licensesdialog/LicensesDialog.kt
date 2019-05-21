@@ -1,3 +1,5 @@
+@file:Suppress("unused")
+
 package com.colinrtwhite.licensesdialog
 
 import android.content.Context
@@ -8,6 +10,7 @@ import androidx.annotation.StringRes
 import androidx.annotation.StyleRes
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
+import androidx.recyclerview.widget.RecyclerView
 import com.colinrtwhite.licensesdialog.chrome.CustomTabData
 import com.colinrtwhite.licensesdialog.license.ApacheLicense20
 import com.colinrtwhite.licensesdialog.model.Copyright
@@ -17,7 +20,6 @@ import java.util.Collections.emptyList
 /**
  * Use [LicensesDialog.Builder] to create and show a list of open source software notices.
  */
-@Suppress("unused", "MemberVisibilityCanBePrivate")
 class LicensesDialog private constructor(
 	private val context: Context,
 	private val title: String,
@@ -149,7 +151,7 @@ class LicensesDialog private constructor(
 		val dividerColor = ContextCompat.getColor(context, dividerColorResId)
 
 		val view = View.inflate(context, R.layout.license_dialog_list, null)
-		view.findViewById<androidx.recyclerview.widget.RecyclerView>(R.id.list).apply {
+		view.findViewById<RecyclerView>(R.id.list).apply {
 			adapter = LicensesListAdapter(this, notices, customTabData, dividerColor, alwaysExpandLicenses)
 			layoutManager = androidx.recyclerview.widget.LinearLayoutManager(context)
 		}

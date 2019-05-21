@@ -32,7 +32,4 @@ dependencies {
 
     // Kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
-
-    // JUnit
-    testImplementation "junit:junit:$junitVersion"
 }
