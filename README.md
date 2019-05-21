@@ -39,7 +39,7 @@ And add the library to your list of dependencies:
 
 ```groovy
 dependencies {
-    implementation 'com.github.colinrtwhite:licensesdialog:1.0.0'
+    implementation 'com.github.colinrtwhite:licensesdialog:2.0.1'
 }
 ```
 
