@@ -24,6 +24,16 @@ android {
 			consumerProguardFiles 'proguard-rules.pro'
 		}
 	}
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
 }
 
 androidExtensions {
@@ -33,11 +43,11 @@ androidExtensions {
 
 dependencies {
 	// AndroidX
-	implementation "androidx.appcompat:appcompat:$androidXVersion"
-	implementation "androidx.browser:browser:$androidXVersion"
-	implementation "androidx.core:core-ktx:$androidXVersion"
-	implementation "androidx.recyclerview:recyclerview:$androidXVersion"
-	implementation "com.google.android.material:material:$androidXVersion"
+	implementation "androidx.appcompat:appcompat:1.1.0"
+	implementation "androidx.browser:browser:1.2.0"
+	implementation "androidx.core:core-ktx:1.2.0"
+	implementation "androidx.recyclerview:recyclerview:1.1.0"
+	implementation "com.google.android.material:material:1.1.0"
 
 	// Kotlin
 	implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"

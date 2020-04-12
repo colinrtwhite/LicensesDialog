@@ -1,4 +1,4 @@
-@file:Suppress("unused")
+@file:Suppress("MemberVisibilityCanBePrivate", "unused")
 
 package com.colinrtwhite.licensesdialog
 
@@ -8,13 +8,13 @@ import androidx.annotation.ColorInt
 import androidx.annotation.MainThread
 import androidx.annotation.StringRes
 import androidx.annotation.StyleRes
-import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.colinrtwhite.licensesdialog.chrome.CustomTabData
 import com.colinrtwhite.licensesdialog.license.ApacheLicense20
 import com.colinrtwhite.licensesdialog.model.Copyright
 import com.colinrtwhite.licensesdialog.model.Notice
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import java.util.Collections.emptyList
 
 /**
@@ -31,14 +31,12 @@ class LicensesDialog private constructor(
 ) {
 
 	companion object {
-		private val LIBRARY_NOTICE by lazy(LazyThreadSafetyMode.NONE) {
-			Notice(
-				"Licenses Dialog",
-				ApacheLicense20,
-				"github.com/colinrtwhite/LicensesDialog",
-				Copyright("Colin White", 2018)
-			)
-		}
+		private val LIBRARY_NOTICE = Notice(
+			"Licenses Dialog",
+			ApacheLicense20,
+			"github.com/colinrtwhite/LicensesDialog",
+			Copyright("Colin White", 2018)
+		)
 	}
 
 	class Builder(private val context: Context) {
@@ -51,53 +49,46 @@ class LicensesDialog private constructor(
 		private var isDarkTheme = false
 		private var notices: List<Notice> = emptyList()
 
-		fun setTitle(@StringRes titleResId: Int): Builder {
-			return setTitle(context.getString(titleResId))
+		fun setTitle(@StringRes titleResId: Int) = apply {
+			this.title = context.getString(titleResId)
 		}
 
-		fun setTitle(title: String): Builder {
+		fun setTitle(title: String) = apply {
 			this.title = title
-			return this
 		}
 
-		fun setStyle(@StyleRes themeResId: Int): Builder {
+		fun setStyle(@StyleRes themeResId: Int) = apply {
 			this.themeResId = themeResId
-			return this
 		}
 
-		fun setCustomTabPrimaryColor(@ColorInt primaryColor: Int): Builder {
+		fun setCustomTabPrimaryColor(@ColorInt primaryColor: Int) = apply {
 			this.customTabPrimaryColor = primaryColor
-			return this
 		}
 
-		fun setNotices(notices: List<Notice>): Builder {
+		fun setNotices(notices: List<Notice>) = apply {
 			this.notices = notices
-			return this
 		}
 
 		/**
 		 * If true, always show expanded license text.
 		 */
-		fun setAlwaysExpandLicenses(alwaysExpandLicenses: Boolean): Builder {
+		fun setAlwaysExpandLicenses(alwaysExpandLicenses: Boolean) = apply {
 			this.alwaysExpandLicenses = alwaysExpandLicenses
-			return this
 		}
 
 		/**
 		 * If true, add this library's license automatically to the list of licenses.
 		 */
-		fun setIncludeOwnLicense(includeOwnLicense: Boolean): Builder {
+		fun setIncludeOwnLicense(includeOwnLicense: Boolean) = apply {
 			this.includeOwnLicense = includeOwnLicense
-			return this
 		}
 
 		/**
 		 * If true, use light dividers + license text background
 		 * (to contrast the dark alert dialog background).
 		 */
-		fun setIsDarkTheme(isDarkTheme: Boolean): Builder {
+		fun setIsDarkTheme(isDarkTheme: Boolean) = apply {
 			this.isDarkTheme = isDarkTheme
-			return this
 		}
 
 		fun create(): LicensesDialog {
@@ -120,18 +111,16 @@ class LicensesDialog private constructor(
 
 		@MainThread
 		fun show(): LicensesDialog {
-			val dialog = create()
-			dialog.show()
-			return dialog
+			return create().apply { show() }
 		}
 	}
 
 	@MainThread
 	fun show() {
 		val builder = if (themeResId != -1) {
-			AlertDialog.Builder(context, themeResId)
+			MaterialAlertDialogBuilder(context, themeResId)
 		} else {
-			AlertDialog.Builder(context)
+			MaterialAlertDialogBuilder(context)
 		}
 
 		// Use the AlertDialog builder's context, since it is automatically themed.

@@ -1,3 +1,5 @@
+@file:Suppress("MemberVisibilityCanBePrivate")
+
 package com.colinrtwhite.licensesdialog.model
 
 import android.net.Uri

@@ -21,14 +21,24 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
 }
 
 dependencies {
     implementation project(':library')
 
     // AndroidX
-    implementation "androidx.appcompat:appcompat:$androidXVersion"
-    implementation "com.google.android.material:material:$androidXVersion"
+    implementation "androidx.appcompat:appcompat:1.1.0"
+    implementation "com.google.android.material:material:1.1.0"
 
     // Kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
