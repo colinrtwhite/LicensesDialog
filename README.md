@@ -56,7 +56,7 @@ This library is inspired by [Licenses Dialog](https://github.com/PSDev/LicensesD
 ## License
 
 ```
-Copyright 2018 Colin White
+Copyright 2020 Colin White
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

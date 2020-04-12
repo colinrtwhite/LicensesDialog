@@ -35,7 +35,7 @@ class LicensesDialog private constructor(
 			"Licenses Dialog",
 			ApacheLicense20,
 			"github.com/colinrtwhite/LicensesDialog",
-			Copyright("Colin White", 2018)
+			Copyright("Colin White", 2020)
 		)
 	}
 
